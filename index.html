@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>猎豹反钓鱼专家 - 专业的网络安全防护方案</title>
+<title>钓鱼防护_仿冒监控_品牌保护-猎豹反钓鱼专家</title>
+<meta name="description" content="猎豹反钓鱼专家专注于钓鱼网站检测、仿冒品牌监控及品牌保护服务，提供全方位企业数字资产安全防护解决方案。">
+<meta name="keywords" content="钓鱼,仿冒,品牌保护,钓鱼网站检测,仿冒监控">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -77,23 +79,27 @@ body {
 }
 @media (max-width: 768px) {
   .hidden-md-flex {
-    display: none;
-  }
-  .mobile-nav-menu {
+      display: none;
+    }
+    .mobile-nav-menu {
     display: block;
   }
   .grid-cols-3 {
-    grid-template-columns: 1fr !important;
-  }
-  .hero-section .w-1/2 {
-    width: 100%;
-  }
+      grid-template-columns: 1fr !important;
+    }
+    .hero-section .w-1/2 {
+      width: 100% !important;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0;
+    }
   .hero-section {
     background-image: none;
   }
   .hero-section h1, .hero-section p {
-    padding-right: 10px;
+    padding-right: 0;
   }
+
   #contact .flex {
     flex-direction: column-reverse;
   }
@@ -102,6 +108,16 @@ body {
   }
   #contact .w-1/2:last-child {
     width: 100%;
+  }
+  #contact .max-w-7xl {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #home .max-w-7xl {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    max-width: 100%;
   }
 }
 .mobile-nav-menu {
@@ -115,7 +131,7 @@ body {
     <div class="flex justify-between items-center h-16">
       <div class="flex items-center">
         <!-- 修改图片高度为原来的 2 倍 -->
-        <a href="#"><img src="logo.png" alt="Logo" class="h-16 w-auto"></a>
+        <a href="#" class="flex items-center"><img src="logo.png" alt="Logo" class="h-16 w-auto"><span class="ml-3 text-[16px] font-bold text-gray-900">猎豹反钓鱼专家</span></a>
       </div>
       <div class="hidden md:flex items-center space-x-8 hidden-md-flex">
         <a href="#home" class="text-gray-700 hover:text-primary">首页</a>
@@ -193,15 +209,15 @@ mobileConsultBtn.onclick = function() {
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-center min-h-[500px]">
       <div class="w-1/2">
-        <h1 class="text-5xl font-bold text-gray-900 mb-6">猎豹反钓鱼专家</h1>
-        <p class="text-xl text-gray-700">全方位保护您的品牌安全，快速处置钓鱼仿冒网站、APP 和社交媒体账号，守护企业数字资产</p>
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">猎豹反钓鱼专家<br><span class="text-3xl">钓鱼防护 仿冒监测 品牌保护</span></h1>
+        <p class="text-gray-600">专注钓鱼网站监测、仿冒品牌监测与品牌保护服务，全方位保护您的品牌安全，快速处置钓鱼仿冒网站、APP和社交媒体账号，专业品牌保护解决方案守护企业数字资产</p>
       </div>
     </div>
   </div>
 </section>
 <section class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-16">企业面临的安全挑战</h2>
+    <h2 class="text-3xl font-bold text-center mb-16">企业面临的钓鱼与仿冒安全挑战</h2>
     <div class="grid grid-cols-3 gap-8">
       <div class="bg-white p-8 rounded-lg shadow-sm">
         <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
@@ -214,8 +230,8 @@ mobileConsultBtn.onclick = function() {
         <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
           <i class="fas fa-globe text-primary text-2xl"></i>
         </div>
-        <h3 class="text-xl font-semibold mb-4">仿冒网站泛滥</h3>
-        <p class="text-gray-600">每年超过 50,000 个仿冒网站针对知名企业，造成品牌信誉受损和用户资产损失</p>
+        <h3 class="text-xl font-semibold mb-4">仿冒网站监测与处置</h3>
+        <p class="text-gray-600">每年超过 50,000 个钓鱼仿冒网站针对知名企业，我们提供专业钓鱼网站监测与仿冒网站快速处置服务，防止品牌信誉受损和用户资产损失</p>
       </div>
       <div class="bg-white p-8 rounded-lg shadow-sm">
         <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
@@ -250,15 +266,15 @@ mobileConsultBtn.onclick = function() {
 </section>
 <section id="advantages" class="py-20">
   <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-16">服务优势</h2>
+    <h2 class="text-3xl font-bold text-center mb-16">品牌保护服务优势</h2>
     <div class="space-y-20">
       <div class="flex items-center gap-12">
         <div class="w-1/2">
-          <img src="24小时监控.jpg" alt="实时监控" class="rounded-lg w-full h-full object-cover">
+          <img src="24小时监控.jpg" alt="钓鱼网站实时监控" class="rounded-lg w-full h-full object-cover">
         </div>
         <div class="w-1/2">
-          <h3 class="text-2xl font-bold mb-6">7×24 小时实时监控</h3>
-          <p class="text-gray-600 mb-4">专业安全团队全天候监控，快速发现仿冒威胁</p>
+          <h3 class="text-2xl font-bold mb-6">7×24 小时钓鱼与仿冒实时监控</h3>
+          <p class="text-gray-600 mb-4">专业安全团队全天候监测各类钓鱼网站和仿冒账号，快速发现品牌仿冒威胁</p>
           <ul class="space-y-4">
             <li class="flex items-center">
               <i class="fas fa-check text-primary mr-3"></i>
@@ -295,12 +311,12 @@ mobileConsultBtn.onclick = function() {
           </ul>
         </div>
         <div class="w-1/2">
-          <img src="快速处置.jpg" alt="快速处置" class="rounded-lg w-full h-full object-cover">
+          <img src="快速处置.jpg" alt="仿冒网站快速处置" class="rounded-lg w-full h-full object-cover">
         </div>
       </div>
       <div class="flex items-center gap-12">
                 <div class="w-1/2">
-                  <img src="价格优势.png" alt="产品宣传图" class="rounded-lg w-full h-full object-cover">
+                  <img src="价格优势.png" alt="品牌保护价格优势" class="rounded-lg w-full h-full object-cover">
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-2xl font-bold mb-6">价格优势</h3>
