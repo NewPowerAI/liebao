@@ -35,7 +35,7 @@ tailwind.config = {
 </script>
 <style>
 body {
-  min-height: 1024px;
+  min-height: 100vh;
   scroll-behavior: smooth;
 }
 .hero-section {
@@ -43,36 +43,69 @@ body {
   background-size: cover;
   background-position: right;
 }
-.modal { 
-  display: none; 
-  position: fixed; 
-  z-index: 999; 
-  left: 0; 
-  top: 0; 
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
 }
 .modal-content {
-  background-color: #fefefe; 
-  margin: 15% auto; 
-  padding: 20px; 
-  border: 1px solid #888; 
-  width: 300px; 
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 300px;
   border-radius: 8px;
 }
 .close {
-  color: #aaa; 
-  float: right; 
-  font-size: 28px; 
-  font-weight: bold; 
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 .close:hover,
 .close:focus {
-  color: black; 
-  text-decoration: none; 
-  cursor: pointer; 
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .hidden-md-flex {
+    display: none;
+  }
+  .mobile-nav-menu {
+    display: block;
+  }
+  .grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-section .w-1/2 {
+    width: 100%;
+  }
+  .hero-section {
+    background-image: none;
+  }
+  .hero-section h1, .hero-section p {
+    padding-right: 10px;
+  }
+  #contact .flex {
+    flex-direction: column-reverse;
+  }
+  #contact .w-1/2 {
+    width: 100%;
+  }
+  #contact .w-1/2:last-child {
+    width: 100%;
+  }
+}
+.mobile-nav-menu {
+  display: none;
 }
 </style>
 </head>
@@ -84,13 +117,26 @@ body {
         <!-- 修改图片高度为原来的 2 倍 -->
         <a href="#"><img src="logo.png" alt="Logo" class="h-16 w-auto"></a>
       </div>
-      <div class="hidden md:flex items-center space-x-8">
+      <div class="hidden md:flex items-center space-x-8 hidden-md-flex">
         <a href="#home" class="text-gray-700 hover:text-primary">首页</a>
         <a href="#advantages" class="text-gray-700 hover:text-primary">服务优势</a>
         <a href="#process" class="text-gray-700 hover:text-primary">服务流程</a>
         <a href="#clients" class="text-gray-700 hover:text-primary">合作客户</a>
         <a href="#contact" class="text-gray-700 hover:text-primary">联系我们</a>
         <button id="consultBtn" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-secondary transition-colors">立即咨询</button>
+      </div>
+      <div class="md:hidden mobile-nav-menu">
+        <button id="mobileMenuBtn" class="text-gray-700 hover:text-primary">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div id="mobileMenu" class="absolute top-16 right-4 bg-white shadow-lg p-4 hidden">
+          <a href="#home" class="block text-gray-700 hover:text-primary mb-2">首页</a>
+          <a href="#advantages" class="block text-gray-700 hover:text-primary mb-2">服务优势</a>
+          <a href="#process" class="block text-gray-700 hover:text-primary mb-2">服务流程</a>
+          <a href="#clients" class="block text-gray-700 hover:text-primary mb-2">合作客户</a>
+          <a href="#contact" class="block text-gray-700 hover:text-primary mb-2">联系我们</a>
+          <button id="mobileConsultBtn" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-secondary transition-colors">立即咨询</button>
+        </div>
       </div>
     </div>
   </div>
@@ -129,6 +175,19 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileConsultBtn = document.getElementById('mobileConsultBtn');
+
+mobileMenuBtn.onclick = function() {
+  mobileMenu.classList.toggle('hidden');
+};
+
+mobileConsultBtn.onclick = function() {
+  modal.style.display = "block";
+  mobileMenu.classList.add('hidden');
+};
 </script>
 <section id="home" class="hero-section pt-24 pb-20">
   <div class="max-w-7xl mx-auto px-4">
